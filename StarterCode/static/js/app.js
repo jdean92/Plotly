@@ -26,17 +26,17 @@ function buildPlots(userInput) {
             }
         }
         Plotly.newPlot('bubble', [trace2])
-        var demo_card_li = d3.select('#sample-metadata')
+        var bubble_li = d3.select('#sample-metadata')
         var selected_data = d.metadata.filter(i => i.id == userInput)
         selected_data.forEach(i => {
-            demo_card_li.html('')
-            demo_card_li.append('li').html(`ID: ${i.id}<br>`)
-            demo_card_li.append('li').html(`WAFREQ: ${i.wfreq}<br>`)
-            demo_card_li.append('li').html(`Age: ${i.age}<br>`)
-            demo_card_li.append('li').html(`Ethnicity: ${i.ethnicity}<br>`)
-            demo_card_li.append('li').html(`Location: ${i.location}<br>`)
-            demo_card_li.append('li').html(`BBType: ${i.bbtype}<br>`)
-            demo_card_li.append('li').html(`Gender: ${i.gender}<br>`)
+            bubble_li.html('')
+            bubble_li.append('li').html(`ID: ${i.id}<br>`)
+            bubble_li.append('li').html(`WAFREQ: ${i.wfreq}<br>`)
+            bubble_li.append('li').html(`Age: ${i.age}<br>`)
+            bubble_li.append('li').html(`Ethnicity: ${i.ethnicity}<br>`)
+            bubble_li.append('li').html(`Location: ${i.location}<br>`)
+            bubble_li.append('li').html(`BBType: ${i.bbtype}<br>`)
+            bubble_li.append('li').html(`Gender: ${i.gender}<br>`)
         })
     })
 }
